@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* reset, common ================================================ */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; display: inline-block; color:#000;}
+img{max-width: 100%;}
+label, span{display: inline-block;}
+html{width: 100%; height: 100%}
+body{
+  width: 100%; height: 100%;
+  font-family: 'Comfortaa', sans-serif;
+}
+button{
+  background: none; border: 0;
+}
+.center{position: relative; width: 1250px; margin: auto;}
+
+/* header ======================================================= */
+header{
+  height: 100vh;
+}
+header .center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header img{
+  box-shadow: -1px 13px 109px #000000;
+}
+header .nav {
+  position: absolute;
+  top: 53%;
+  left: 35px;
+  line-height: 78px;
+  font-size: 40px;
+}
+header .nav li a{color: #fff;}
+header .btn-down{
+  position: absolute;
+  bottom: 90px;
+  right: 105px;
+  text-align: center;
+}
+header .center span{
+  display: block;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: #2a7b3d;
+}
+header .tri{
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-top: 23px solid #242a48;
+  /* border-bottom: 50px solid red; */
+  border-right: 18px solid transparent;
+  border-left: 18px solid transparent;
+}
+
+/* section ======================================================= */
+section{
+  background: #252c46;
+}
+section nav{
+  position: fixed;
+  top:0; left:0;
+  width: 100%; height: 100px;
+  background: #2a7b3d;
+  z-index: 10;
+}
+section nav ul{float: right; margin-right: 40px;}
+section nav ul li{float: left; margin-left: 30px;}
+section nav ul li a{
+  display: block;
+  line-height: 80px;
+  margin: 10px 0;
+  color:#fff;
+  text-align: center;
+  font-size: 2em;
+}
+section nav ul li a.active{color:#252C45;font-weight: bold;}
+
+section article{min-height: 100vh; padding-top: 100px; box-sizing: border-box;}
+section article h2{margin: 30px 0; text-align: center; color:#fff; font-size: 3em;}
+
+/* about */
+.self-introduction{
+  max-width: 800px;
+  margin: auto;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.self-introduction p{
+  font-size: 20px;
+  padding: 20px;
+  color: #fff;
+  text-align: justify;
+}
+.skills{
+  max-width: 500px;
+  margin: auto;
+}
+.skills .progress li:nth-child(1){color: #65A5D9;}
+.skills .progress li:nth-child(2){color: #FEDF00;}
+.skills .progress li:nth-child(3){color: #69BD45;}
+.skills .progress li:nth-child(4){color: #50C8EB;}
+.skills .progress li:nth-child(5){color: #fff;}
+.skills .progress li:nth-child(6){color: #F5851F;}
+.skills .progress ul{
+  top: 10px;
+}
+.skills .progress ul li{
+  position: relative;
+  text-decoration: none;
+  list-style: none;
+  height: 46px;
+}
+.skills .progress ul li span{position: absolute; }
+.skills .progress ul li .wrap{margin:0 50px 0 130px;}
+.skills .progress .aboutme_box{
+  width: 100%;
+  border: 1px solid #fff;
+}
+.skills .progress .aboutme_bar{
+  background: #fff;
+  width: 1px;
+  height: 13px;
+}
+.skills .progress .aboutme_val{
+  position: absolute; right:0; top:0;
+}
+.skills .skill_img{
+  overflow: hidden;
+}
+.skills .skill_img li{float: left; width: 16.66%; text-align: center;}
+.skills .skill_img li img{}
+/*project=================================================*/
+.project-box{}
+.project-box ul{overflow: hidden;margin: 0 -15px;}
+.project-box ul li{float: left; height: 535px; text-align: center; margin-bottom: 30px;}
+.project-box ul li .img-box{
+  position: relative; width: 300px; margin: auto; height: 340px;
+}
+.project-box ul li .img-box .wrap{
+  position: relative;
+  width: 300px; height: 300px; overflow: hidden;
+  border: 10px solid #2a7b3d; border-radius: 50%; box-sizing: border-box;
+}
+.project-box ul li .img-box .wrap img{width: 100%;}
+.project-box ul li .img-box .wrap .over{
+  position: absolute; top:0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); opacity: 0;
+  transition: all 0.5s;
+}
+.project-box ul li .img-box .wrap:hover .over{opacity: 1;}
+.project-box ul li .img-box .wrap .over button{
+  position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+  color:#fff; background: none; font-size: 52px; cursor: pointer; outline: none;
+}
+.project-box ul li .img-box .wrap .over button
+.project-box ul li .img-box > span{
+  position: absolute; left:50%; bottom:20px;
+  width: 60px; height: 60px; margin-left: -30px;
+  background: #a3b940; color:#fff; border-radius: 50%;
+  line-height: 60px; text-transform: uppercase;
+}
+
+.project-box dl{
+  width: 300px; margin: auto;
+  border-top:1px solid #2a7b3d; border-bottom: 1px solid #2a7b3d;
+}
+.project-box dl dt{height: 90px; color:#2a7b3d;}
+.project-box dl dt b{display:block; padding-top: 20px; font-size: 21px;}
+.project-box dl dt span{font-size: 18px;}
+.project-box dl dd{
+  height: 205px; font-size: 14px; padding: 15px 30px; box-sizing: border-box;
+  background: #e3e3e3; border-top: 1px solid #969696; text-align: left;
+}
+#profile table{
+  color: #fff;
+  margin: 0 auto;
+  width: 880px;
+  line-height: 50px;
+}
+#profile table td{
+  padding-left: 15px;
+}
